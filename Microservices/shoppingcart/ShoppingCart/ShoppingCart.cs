@@ -36,5 +36,5 @@ namespace ShoppingCart.ShoppingCart {
         public override int GetHashCode() => this.ProductCatalogueId.GetHashCode();
     }
 
-    public record Money(string currency, decimal Amount);
+    public record Money(string Currency, decimal Amount);
 }

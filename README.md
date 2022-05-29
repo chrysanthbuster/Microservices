@@ -6,7 +6,8 @@ A mix of several book tutorial patched together by google and stackoverflow answ
 - Configurations for the application is all default.
 - Run the product endpoint and it will listen on port 8080
 - Run the shopping cart application and it will listen on port 5000
-- some feature in shopping cart will make get requests to product endpoint
+- Some feature in shopping cart will make get requests to product endpoint
 the idea of microservices is that shopping cart should be not be breaking when product is down, only the functionalities that has a direct dependency on product should be down.
+- To run the shopping cart without product endpoint, we can alternatively set up a mock backend with Firebase Realtime Database. (#to-do)
 
 There are not many microservices at the moment, this is my active working project, currently adding a simple angular frontend to display the results and do some simple testing from the ui

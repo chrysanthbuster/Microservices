@@ -76,4 +76,15 @@
             </ul>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <H2>Listing Shopping cart items for user:{{ userId }}</H2>
+            <table class="table">
+                <tr ng-repeat="let ShoppingCartItem in ShoppingCartList"></tr>
+            </table>
+            <p *ngIf="ShoppingCartList.length < 1 && !isFetching">
+                Nothing in shopping cart
+            </p>
+        </div>
+    </div>
 </div>

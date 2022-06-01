@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs';
 
 import { Post } from './post.model';
 import { PostService } from './posts.service';
+import { ShoppingCart } from './shoppingcart.model';
+import { ShoppingCartService } from './shoppingcart.service';
 
 @Component({
     selector: 'app-root',
@@ -15,12 +17,17 @@ export class AppComponent implements OnInit, OnDestroy {
     isFetching: boolean;
     error: string;
 
+    userId: number;
+    ShoppingCartList: ShoppingCart[];
+
     private errorSub!: Subscription;
 
     constructor(private postsService: PostService) {
         this.loadedPosts = [];
         this.isFetching = false;
         this.error = '';
+        this.userId = 123;
+        this.ShoppingCartList = [];
     }
 
     ngOnInit() {

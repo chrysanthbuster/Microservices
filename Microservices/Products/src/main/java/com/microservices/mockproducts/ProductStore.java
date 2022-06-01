@@ -11,7 +11,7 @@ public class ProductStore {
     static Map<Long, Product> productBridgeMock = Collections.synchronizedMap(new HashMap<Long, Product>());
 
     public ProductStore(){
-        //set up mock values
+        //set up mock values, we can put this into sqlite/firebase for persistant storage
         productBridgeMock.put(1L,
                 new Product(1L, "Basic t-shirt", "a quiet t-shirt", 40, "eur",
                     new Sizes("s", "m", "l"),
